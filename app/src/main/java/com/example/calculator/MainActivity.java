@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonAdd, buttonSubtract, buttonDivide, buttonMultiply, buttonClean, buttonStep;
     private TextView operation, result;
     private EditText number1, number2;
+
+    public void Click(View view) {
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
